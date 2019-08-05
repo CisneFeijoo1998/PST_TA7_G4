@@ -32,6 +32,16 @@ public class Menu extends AppCompatActivity {
 
         lista.setAdapter(new Adaptador(this, datos, datosImg));
 
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent visorDetalles = new Intent(view.getContext(), VisorMenu.class);
+                visorDetalles.putExtra("TIT", datos[position][0]);
+                visorDetalles.putExtra("DET", datos[position][2]);
+                startActivity(visorDetalles);
+            }
+        });
+
 
     }
 
