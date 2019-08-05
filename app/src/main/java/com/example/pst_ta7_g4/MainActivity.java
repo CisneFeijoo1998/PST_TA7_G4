@@ -13,9 +13,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+<<<<<<< HEAD
     public void button(View view) {
         Intent i = new Intent(this, Informacion.class );
         startActivity(i);
     }
+=======
+>>>>>>> ee2aa64c97464aca314096643cc82d2bc1db4b2a
 
 }
