@@ -20,7 +20,7 @@
             android:label="@string/title_activity_mapa"></activity>
         <activity android:name=".Informacion" />
         <activity android:name=".reservaActivity"/>
-        <activity android:name=".MainActivity">
+        <activity android:name=".Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -25,7 +25,7 @@ public class Informacion extends AppCompatActivity {
     }
 
     public void volver(View view) {
-        Intent i = new Intent(this,MainActivity.class );
+        Intent i = new Intent(this, Main.class );
         startActivity(i);
     }
 
