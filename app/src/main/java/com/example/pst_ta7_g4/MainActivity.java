@@ -23,4 +23,9 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this,reservaActivity.class);
         startActivity(i);
     }
+
+    public void Menu(View view) {
+        Intent i = new Intent(this, Menu.class);
+        startActivity(i);
+    }
 }
