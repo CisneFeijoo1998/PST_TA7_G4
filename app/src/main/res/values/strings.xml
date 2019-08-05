@@ -2,6 +2,7 @@
     <string name="app_name">PST_TA7_G4</string>
     <string name="prueba">PRUEBA</string>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <string name="informaci_n">INFORMACIÓN</string>
     <string name="FONDO">TODO</string>
     <string name="menestras_del_negro">Menestras del Negro</string>
@@ -20,6 +21,11 @@
     <string name="telefono">TELEFONO:</string>
     <string name="title_activity_mapa">Map</string>
     <string name="regresar">REGRESAR</string>
+=======
+    <string name="titlulo_pickers">Obtener fecha y hora</string>
+    <string name="formato_fecha">dd/mm/yyyy</string>
+    <string name="formato_hora">hh:mm</string>
+>>>>>>> ee2aa64c97464aca314096643cc82d2bc1db4b2a
 =======
     <string name="titlulo_pickers">Obtener fecha y hora</string>
     <string name="formato_fecha">dd/mm/yyyy</string>
