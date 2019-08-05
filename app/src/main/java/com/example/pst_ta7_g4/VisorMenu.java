@@ -14,19 +14,18 @@ public class VisorMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visor_menu);
 
-        ImageView img = (ImageView) findViewById(R.id.visormenu);
         TextView titulo = (TextView) findViewById(R.id.titulo);
         TextView detalles = (TextView) findViewById(R.id.descripcion);
-
 
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
 
         if(b!=null) {
-            img.setImageResource(b.getInt("IMG"));
             titulo.setText(b.getString("TIT"));
             detalles.setText(b.getString("DET"));
         }
+
+
 
     }
 }

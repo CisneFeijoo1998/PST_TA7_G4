@@ -34,25 +34,11 @@ public class Adaptador extends BaseAdapter {
 
         TextView plato = (TextView) vista.findViewById(R.id.nombreplato);
         TextView valor = (TextView) vista.findViewById(R.id.valorplato);
-
         ImageView imagen = (ImageView) vista.findViewById(R.id.imageFood);
 
         plato.setText(datos[i][0]);
         valor.setText(datos[i][1]);
         imagen.setImageResource(datosImg[i]);
-
-
-        imagen.setTag(i);
-
-        imagen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent visorImagen = new Intent(contexto, VisorMenu.class);
-                visorImagen.putExtra("IMG", datosImg[(Integer)v.getTag()]);
-                contexto.startActivity(visorImagen);
-            }
-        });
-
 
         return vista;
     }

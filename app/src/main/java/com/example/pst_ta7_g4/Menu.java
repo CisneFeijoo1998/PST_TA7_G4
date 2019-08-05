@@ -22,6 +22,7 @@ public class Menu extends AppCompatActivity {
     };
 
     int[] datosImg = {R.drawable.menu_churrascomontado, R.drawable.menu_megaapanada, R.drawable.menu_espepollo, R.drawable.menestras_especiales};
+    private Object Integer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +33,18 @@ public class Menu extends AppCompatActivity {
 
         lista.setAdapter(new Adaptador(this, datos, datosImg));
 
+
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+
                 Intent visorDetalles = new Intent(view.getContext(), VisorMenu.class);
                 visorDetalles.putExtra("TIT", datos[position][0]);
                 visorDetalles.putExtra("DET", datos[position][2]);
+                visorDetalles.putExtra("IMG", datosImg[position]);
                 startActivity(visorDetalles);
+
             }
         });
 
