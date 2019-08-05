@@ -23,4 +23,9 @@
     <string name="formato_fecha">dd/mm/yyyy</string>
     <string name="formato_hora">hh:mm</string>
     <string name="reservar">Reservar</string>
+    <string name="c_i">C.I</string>
+    <string name="nombre">Nombre</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="reservar">Reservar</string>
+    <string name="celular">Celular</string>
 </resources>
