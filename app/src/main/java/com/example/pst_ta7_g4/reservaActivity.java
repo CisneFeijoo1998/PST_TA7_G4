@@ -1,8 +1,5 @@
 package com.example.pst_ta7_g4;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -15,6 +12,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import java.util.Calendar;
 
@@ -49,7 +49,7 @@ public class reservaActivity extends AppCompatActivity implements View.OnClickLi
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reserva);
+
         ActivityCompat.requestPermissions(reservaActivity.this, new String[]{Manifest.permission.SEND_SMS}
                 , SMS_PERMISSION_CONSTANT);
         //Widget EditText donde se mostrara la fecha obtenida
