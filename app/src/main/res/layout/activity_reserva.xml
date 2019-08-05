@@ -8,8 +8,8 @@
     tools:context=".reservaActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="360dp"
-        android:layout_height="619dp"
+        android:layout_width="369dp"
+        android:layout_height="571dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="8dp"
@@ -26,6 +26,7 @@
             android:layout_marginStart="48dp"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="168dp"
+            android:autofillHints="@string/formato_fecha"
             android:ems="10"
             android:hint="@string/formato_fecha"
             android:inputType="date"
@@ -33,8 +34,7 @@
             app:layout_constraintHorizontal_bias="0.231"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:autofillHints="@string/formato_fecha" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/et_mostrar_hora_picker"
@@ -42,12 +42,12 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="56dp"
+            android:autofillHints="@string/formato_hora"
             android:ems="10"
             android:hint="@string/formato_hora"
             android:inputType="time"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_mostrar_fecha_picker"
-            android:autofillHints="@string/formato_hora" />
+            app:layout_constraintTop_toBottomOf="@+id/et_mostrar_fecha_picker" />
 
         <ImageButton
             android:id="@+id/ib_obtener_fecha"
@@ -80,14 +80,14 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="96dp"
             android:layout_marginEnd="8dp"
+            android:autofillHints="Celular"
             android:ems="10"
             android:hint="Celular"
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.521"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText5"
-            android:autofillHints="Celular" />
+            app:layout_constraintTop_toBottomOf="@+id/editText5" />
 
         <EditText
             android:id="@+id/editText6"
@@ -96,14 +96,14 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
+            android:autofillHints="C.I"
             android:ems="10"
             android:hint="C.I"
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.521"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText5"
-            android:autofillHints="C.I" />
+            app:layout_constraintTop_toBottomOf="@+id/editText5" />
 
         <EditText
             android:id="@+id/editText5"
@@ -112,14 +112,14 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="8dp"
+            android:autofillHints="Nombre"
             android:ems="10"
             android:hint="Nombre"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.531"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ib_obtener_hora"
-            android:autofillHints="Nombre" />
+            app:layout_constraintTop_toBottomOf="@+id/ib_obtener_hora" />
 
         <Button
             android:id="@+id/button"
@@ -141,21 +141,18 @@
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="64dp"
+            android:layout_width="85dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="68dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
             android:backgroundTint="@android:color/holo_orange_light"
             android:onClick="reservar"
             android:text="Reservar"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.281"
+            app:layout_constraintHorizontal_bias="0.134"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText4"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/editText4" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
