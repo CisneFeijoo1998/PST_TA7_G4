@@ -1,6 +1,24 @@
 <resources>
     <string name="app_name">PST_TA7_G4</string>
     <string name="prueba">PRUEBA</string>
+    <string name="informaci_n">INFORMACIÓN</string>
+    <string name="FONDO">TODO</string>
+    <string name="menestras_del_negro">Menestras del Negro</string>
+    <string name="restaurante">RESTAURANTE</string>
+    <string name="quito">Quito</string>
+    <string name="centro_comercial_el_recreo_patio_de_comidas_planta_baja">Centro Comercial El Recreo, patio de comidas, planta baja</string>
+    <string name="guayaquil">Guayaquil</string>
+    <string name="centro_comercial_r_o_centro_norte_av_francisco_de_orellana">Centro Comercial Río Centro Norte – Av. Francisco De Orellana</string>
+    <string name="como_llegar">Como llegar?</string>
+    <string name="mapa">MAPA</string>
+    <string name="todo">TODO</string>
+    <string name="como_llegar1">COMO LLEGAR?</string>
+    <string name="horario">HORARIO</string>
+    <string name="button">Button</string>
+    <string name="_0969455781">0969455781</string>
+    <string name="telefono">TELEFONO:</string>
+    <string name="title_activity_mapa">Map</string>
+    <string name="regresar">REGRESAR</string>
     <string name="titlulo_pickers">Obtener fecha y hora</string>
     <string name="formato_fecha">dd/mm/yyyy</string>
     <string name="formato_hora">hh:mm</string>
