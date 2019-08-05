@@ -14,4 +14,9 @@
     <string name="todo">TODO</string>
     <string name="como_llegar1">COMO LLEGAR?</string>
     <string name="horario">HORARIO</string>
+    <string name="button">Button</string>
+    <string name="_0969455781">0969455781</string>
+    <string name="telefono">TELEFONO:</string>
+    <string name="title_activity_mapa">Map</string>
+    <string name="regresar">REGRESAR</string>
 </resources>
