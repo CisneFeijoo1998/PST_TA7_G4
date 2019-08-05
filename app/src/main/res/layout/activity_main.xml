@@ -24,7 +24,7 @@
         android:layout_marginTop="372dp"
         android:layout_marginEnd="144dp"
         android:onClick="button"
-        android:text="Informacion"
+        android:text="@string/informacion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,7 +37,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:onClick="toReserva"
-        android:text="Reserva"
+        android:text="@string/reserva"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

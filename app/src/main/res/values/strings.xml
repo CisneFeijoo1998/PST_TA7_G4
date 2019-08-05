@@ -23,4 +23,6 @@
     <string name="formato_fecha">dd/mm/yyyy</string>
     <string name="formato_hora">hh:mm</string>
     <string name="reservar">Reservar</string>
+    <string name="informacion">Informacion</string>
+    <string name="reserva">Reserva</string>
 </resources>
