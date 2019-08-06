@@ -18,8 +18,8 @@
 
     <ImageView
         android:id="@+id/img_menu"
-        android:layout_width="410dp"
-        android:layout_height="250dp"
+        android:layout_width="414dp"
+        android:layout_height="246dp"
         android:layout_marginTop="144dp"
         android:onClick="toMenu"
         android:tint="#33FFFFFF"
@@ -29,8 +29,8 @@
 
     <ImageView
         android:id="@+id/img_reserva"
-        android:layout_width="410dp"
-        android:layout_height="270dp"
+        android:layout_width="414dp"
+        android:layout_height="283dp"
         android:layout_marginTop="396dp"
         android:background="#1AFFFFFF"
         android:onClick="toReserva"
