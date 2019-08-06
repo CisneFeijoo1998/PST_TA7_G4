@@ -29,27 +29,28 @@ public class Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        //por cada informacion que encuentre, por cada posicion del vector creara un elemento en la lista
         lista = (ListView) findViewById(R.id.Lista);
-
+        //generamos un objeto de clase adaptador y enviamos como parametro datos y datosImg
         lista.setAdapter(new Adaptador(this, datos, datosImg));
 
-
+        //cuando se de clic en un elemento de la lista, podremos controlar esos eventos
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-
                 Intent visorDetalles = new Intent(view.getContext(), VisorMenu.class);
+                //agregamos los parametros extras, titulo, descpricion, imagen
+                //obtenemos la posicion de esos datos por medio de "position"
                 visorDetalles.putExtra("TIT", datos[position][0]);
                 visorDetalles.putExtra("DET", datos[position][2]);
                 visorDetalles.putExtra("IMG", datosImg[position]);
                 startActivity(visorDetalles);
-
             }
         });
-
-
     }
-
-
+    //metodo para volver al main
+    public void volver(View view) {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+    }
 }
