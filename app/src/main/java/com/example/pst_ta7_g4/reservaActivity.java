@@ -1,8 +1,5 @@
 package com.example.pst_ta7_g4;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -15,6 +12,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import java.util.Calendar;
 
@@ -45,8 +45,8 @@ public class reservaActivity extends AppCompatActivity implements View.OnClickLi
     EditText etNumero;
     EditText etNombre;
     EditText etCedula;
-    @Override
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reserva);
@@ -84,6 +84,10 @@ public class reservaActivity extends AppCompatActivity implements View.OnClickLi
         }
     }
 
+    /**
+     * Se hace uso de un cuadro de dialogo para escoger la fecha para la reserva. Viene como predeterminado la fecha
+     * del dispositivo.
+     */
     private void obtenerFecha(){
         DatePickerDialog recogerFecha = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
@@ -104,6 +108,10 @@ public class reservaActivity extends AppCompatActivity implements View.OnClickLi
 
     }
 
+    /**
+     * Se hace uso de un cuadro de dialogo para escoger la hora de la reserva. Viene como predeterminado la hora actual
+     * del dispositivo.
+     */
     private void obtenerHora(){
         TimePickerDialog recogerHora = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
             @Override
@@ -127,6 +135,11 @@ public class reservaActivity extends AppCompatActivity implements View.OnClickLi
         recogerHora.show();
     }
 
+    /**
+     * Se hace uso de SMS Manager para el envio de SMS a un numero telefonico. Ademas de crear
+     * cuadros de alerta de dialogo y toasts segun convenga.
+     * @param view Al ser presionado el boton correspondiente al método.
+     */
     public void reservar(View view) {
         if(!(etNumero.getText().toString().equals("")|etNombre.getText().toString().equals("")|etCedula.getText().toString().equals("")|etFecha.getText().toString().equals("")|etHora.getText().toString().equals(""))){
             try {
@@ -160,6 +173,9 @@ public class reservaActivity extends AppCompatActivity implements View.OnClickLi
         limpiarCampos();
     }
 
+    /**
+     * Metodo que limpia los campos del formulario
+     */
     public void limpiarCampos(){
         etNumero.setText("");
         etNombre.setText("");
