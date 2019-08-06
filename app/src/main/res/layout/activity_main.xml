@@ -6,58 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button5"
+    <ImageView
+        android:id="@+id/img_Encabezado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:onClick="toReserva"
-        android:text="string/reserva"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:onClick="toInformacion"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.067" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/img_menu"
+        android:layout_width="410dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="144dp"
+        android:onClick="toMenu"
+        android:tint="#33FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu" />
+
+    <ImageView
+        android:id="@+id/img_reserva"
+        android:layout_width="410dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="396dp"
+        android:background="#1AFFFFFF"
+        android:onClick="toReserva"
+        android:tint="#33FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/reserva" />
+
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/lbl_reserva"
         android:layout_width="162dp"
         android:layout_height="51dp"
-        android:layout_marginTop="268dp"
-        android:layout_marginEnd="108dp"
-        android:text="@string/prueba"
+        android:layout_marginTop="604dp"
+        android:layout_marginEnd="232dp"
+        android:text="Reservar"
+        android:textColor="#E6F9F9F9"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="396dp"
-        android:layout_marginEnd="116dp"
-        android:onClick="button"
-        android:text="string/informacion"
+    <TextView
+        android:id="@+id/lbl_menu"
+        android:layout_width="162dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="332dp"
+        android:layout_marginEnd="240dp"
+        android:text="Menu"
+        android:textColor="#E6F9F9F9"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:onClick="Menu"
-        android:text="MENU"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.029" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

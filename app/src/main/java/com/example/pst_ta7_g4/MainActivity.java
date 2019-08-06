@@ -3,17 +3,24 @@ package com.example.pst_ta7_g4;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+    private TextView lbl_Prueba;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
     }
-    public void button(View view) {
+
+
+
+    public void toInformacion(View view) {
         Intent i = new Intent(this, Informacion.class );
         startActivity(i);
     }
@@ -24,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void Menu(View view) {
+    public void toMenu(View view) {
         Intent i = new Intent(this, Menu.class);
         startActivity(i);
     }
