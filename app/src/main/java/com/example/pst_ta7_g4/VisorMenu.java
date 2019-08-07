@@ -20,9 +20,9 @@ public class VisorMenu extends AppCompatActivity {
         setContentView(R.layout.activity_visor_menu);
 
         //declaramos los elementos y obtenemos la informacion que se esta obteniendo
-        TextView titulo = (TextView) findViewById(R.id.titulo);
-        TextView detalles = (TextView) findViewById(R.id.descripcion);
-        ImageView img = (ImageView) findViewById(R.id.visormenu);
+        TextView titulo = findViewById(R.id.titulo);
+        TextView detalles = findViewById(R.id.descripcion);
+        ImageView img = findViewById(R.id.visormenu);
 
         Intent intent = getIntent();
         Bundle b = intent.getExtras();

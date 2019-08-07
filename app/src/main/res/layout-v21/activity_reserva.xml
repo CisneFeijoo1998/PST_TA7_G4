@@ -34,20 +34,22 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:autofillHints="@string/formato_fecha" />
+            android:autofillHints="@string/formato_fecha"
+            tools:targetApi="o" />
 
         <EditText
             android:id="@+id/et_mostrar_hora_picker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="56dp"
             android:ems="10"
             android:hint="@string/formato_hora"
             android:inputType="time"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_mostrar_fecha_picker"
-            android:autofillHints="@string/formato_hora" />
+            android:autofillHints="@string/formato_hora"
+            tools:targetApi="o" />
 
         <ImageButton
             android:id="@+id/ib_obtener_fecha"
@@ -87,7 +89,8 @@
             app:layout_constraintHorizontal_bias="0.521"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText5"
-            android:autofillHints="Celular" />
+            android:autofillHints="Celular"
+            tools:targetApi="o" />
 
         <EditText
             android:id="@+id/editText6"
@@ -103,7 +106,8 @@
             app:layout_constraintHorizontal_bias="0.521"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText5"
-            android:autofillHints="C.I" />
+            android:autofillHints="C.I"
+            tools:targetApi="o" />
 
         <EditText
             android:id="@+id/editText5"
@@ -119,10 +123,10 @@
             app:layout_constraintHorizontal_bias="0.531"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ib_obtener_hora"
-            android:autofillHints="Nombre" />
+            android:autofillHints="Nombre"
+            tools:targetApi="o" />
 
         <Button
-            android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"

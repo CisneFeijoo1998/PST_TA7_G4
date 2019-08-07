@@ -15,8 +15,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class Mapa extends FragmentActivity implements OnMapReadyCallback {
 
-    private GoogleMap mMap;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,17 +41,16 @@ public class Mapa extends FragmentActivity implements OnMapReadyCallback {
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
 
         // Agregamos una nueva marca en la ubicacion del restaurante en quito, segun sus coordenadas de latitud y longitud.
 
         LatLng quito = new LatLng(-0.2525943, -78.5224697);
-        mMap.addMarker(new MarkerOptions().position(quito).title("Restaurante en Quito")); //Añadimos un titulo a la marca
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(quito,15));
+        googleMap.addMarker(new MarkerOptions().position(quito).title("Restaurante en Quito")); //Añadimos un titulo a la marca
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(quito,15));
 
         // Agregamos una nueva marca en la ubicacion del restaurante en guayaquil, segun sus coordenadas de latitud y longitud.
         LatLng gye = new LatLng(-2.1275976, -79.9069422);
-        mMap.addMarker(new MarkerOptions().position(gye).title("Restaurante en Guayaquil"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(gye,15));
+        googleMap.addMarker(new MarkerOptions().position(gye).title("Restaurante en Guayaquil"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(gye,15));
     }
 }

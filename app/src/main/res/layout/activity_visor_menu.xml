@@ -19,7 +19,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/menu_churrascomontado" />
+        app:srcCompat="@drawable/menu_churrascomontado"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/descripcion"

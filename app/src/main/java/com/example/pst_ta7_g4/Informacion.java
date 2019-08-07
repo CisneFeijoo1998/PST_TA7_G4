@@ -10,14 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class Informacion extends AppCompatActivity {
-    Spinner horario;   //Instanciamos el objeto Spinner
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informacion);
 
-        horario=(Spinner)findViewById(R.id.spinner);
+        //Instanciamos el objeto Spinner
+        Spinner horario = findViewById(R.id.spinner);
        //Se crea un ArrayAdapter
         ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,R.array.horario, android.R.layout.simple_spinner_item);
         //Se setea el spinner con el adapter
@@ -35,4 +35,6 @@ public class Informacion extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void regresar(View view) {
+    }
 }

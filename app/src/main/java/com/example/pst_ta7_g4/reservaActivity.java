@@ -25,26 +25,24 @@ public class reservaActivity extends AppCompatActivity implements View.OnClickLi
     private static final String DOS_PUNTOS = ":";
     private static final int SMS_PERMISSION_CONSTANT = 0;
 
-    public final Calendar c = Calendar.getInstance();
+    private final Calendar c = Calendar.getInstance();
 
 
-    final int mes = c.get(Calendar.MONTH);
-    final int dia = c.get(Calendar.DAY_OF_MONTH);
-    final int anio = c.get(Calendar.YEAR);
+    private final int mes = c.get(Calendar.MONTH);
+    private final int dia = c.get(Calendar.DAY_OF_MONTH);
+    private final int anio = c.get(Calendar.YEAR);
 
 
-    EditText etFecha;
-    ImageButton ibObtenerFecha;
+    private EditText etFecha;
 
-    final int hora = c.get(Calendar.HOUR_OF_DAY);
-    final int minuto = c.get(Calendar.MINUTE);
+    private final int hora = c.get(Calendar.HOUR_OF_DAY);
+    private final int minuto = c.get(Calendar.MINUTE);
 
-    EditText etHora;
-    ImageButton ibObtenerHora;
+    private EditText etHora;
 
-    EditText etNumero;
-    EditText etNombre;
-    EditText etCedula;
+    private EditText etNumero;
+    private EditText etNombre;
+    private EditText etCedula;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,23 +51,23 @@ public class reservaActivity extends AppCompatActivity implements View.OnClickLi
         ActivityCompat.requestPermissions(reservaActivity.this, new String[]{Manifest.permission.SEND_SMS}
                 , SMS_PERMISSION_CONSTANT);
         //Widget EditText donde se mostrara la fecha obtenida
-        etFecha = (EditText) findViewById(R.id.et_mostrar_fecha_picker);
+        etFecha = findViewById(R.id.et_mostrar_fecha_picker);
         //Widget ImageButton del cual usaremos el evento clic para obtener la fecha
-        ibObtenerFecha = (ImageButton) findViewById(R.id.ib_obtener_fecha);
+        ImageButton ibObtenerFecha = findViewById(R.id.ib_obtener_fecha);
         //Evento setOnClickListener - clic
         ibObtenerFecha.setOnClickListener(this);
 
         //Widget EditText donde se mostrara la hora obtenida
-        etHora = (EditText) findViewById(R.id.et_mostrar_hora_picker);
+        etHora = findViewById(R.id.et_mostrar_hora_picker);
         //Widget ImageButton del cual usaremos el evento clic para obtener la hora
-        ibObtenerHora = (ImageButton) findViewById(R.id.ib_obtener_hora);
+        ImageButton ibObtenerHora = findViewById(R.id.ib_obtener_hora);
         //Evento setOnClickListener - clic
         ibObtenerHora.setOnClickListener(this);
 
         //EditText que contienen datos del cliente.
-        etNumero = (EditText) findViewById(R.id.editText4);
-        etNombre = (EditText) findViewById(R.id.editText5);
-        etCedula = (EditText) findViewById(R.id.editText6);
+        etNumero = findViewById(R.id.editText4);
+        etNombre = findViewById(R.id.editText5);
+        etCedula = findViewById(R.id.editText6);
     }
 
     @Override
@@ -95,9 +93,9 @@ public class reservaActivity extends AppCompatActivity implements View.OnClickLi
                 //Esta variable lo que realiza es aumentar en uno el mes ya que comienza desde 0 = enero
                 final int mesActual = month + 1;
                 //Formateo el día obtenido: antepone el 0 si son menores de 10
-                String diaFormateado = (dayOfMonth < 10)? CERO + String.valueOf(dayOfMonth):String.valueOf(dayOfMonth);
+                String diaFormateado = (dayOfMonth < 10)? CERO + dayOfMonth :String.valueOf(dayOfMonth);
                 //Formateo el mes obtenido: antepone el 0 si son menores de 10
-                String mesFormateado = (mesActual < 10)? CERO + String.valueOf(mesActual):String.valueOf(mesActual);
+                String mesFormateado = (mesActual < 10)? CERO + mesActual :String.valueOf(mesActual);
                 //Muestro la fecha con el formato deseado
                 etFecha.setText(diaFormateado + BARRA + mesFormateado + BARRA + year);
 
@@ -117,9 +115,9 @@ public class reservaActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                 //Formateo el hora obtenido: antepone el 0 si son menores de 10
-                String horaFormateada =  (hourOfDay < 10)? String.valueOf(CERO + hourOfDay) : String.valueOf(hourOfDay);
+                String horaFormateada =  (hourOfDay < 10)? CERO + hourOfDay : String.valueOf(hourOfDay);
                 //Formateo el minuto obtenido: antepone el 0 si son menores de 10
-                String minutoFormateado = (minute < 10)? String.valueOf(CERO + minute):String.valueOf(minute);
+                String minutoFormateado = (minute < 10)? CERO + minute :String.valueOf(minute);
                 //Obtengo el valor a.m. o p.m., dependiendo de la selección del usuario
                 String AM_PM;
                 if(hourOfDay < 12) {
@@ -176,7 +174,7 @@ public class reservaActivity extends AppCompatActivity implements View.OnClickLi
     /**
      * Metodo que limpia los campos del formulario
      */
-    public void limpiarCampos(){
+    private void limpiarCampos(){
         etNumero.setText("");
         etNombre.setText("");
         etCedula.setText("");
