@@ -26,6 +26,7 @@ public class Mapa extends FragmentActivity implements OnMapReadyCallback {
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
+    //Este metodo permite dar al boton la accion de regresar a la activity Informacion.
     public void regresar(View view) {
         Intent i = new Intent(this,Informacion.class );
         startActivity(i);
@@ -44,11 +45,13 @@ public class Mapa extends FragmentActivity implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
+        // Agregamos una nueva marca en la ubicacion del restaurante en quito, segun sus coordenadas de latitud y longitud.
+
         LatLng quito = new LatLng(-0.2525943, -78.5224697);
-        mMap.addMarker(new MarkerOptions().position(quito).title("Restaurante en Quito"));
+        mMap.addMarker(new MarkerOptions().position(quito).title("Restaurante en Quito")); //Añadimos un titulo a la marca
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(quito,15));
 
+        // Agregamos una nueva marca en la ubicacion del restaurante en guayaquil, segun sus coordenadas de latitud y longitud.
         LatLng gye = new LatLng(-2.1275976, -79.9069422);
         mMap.addMarker(new MarkerOptions().position(gye).title("Restaurante en Guayaquil"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(gye,15));

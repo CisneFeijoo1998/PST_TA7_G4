@@ -23,12 +23,13 @@ public class Informacion extends AppCompatActivity {
         //Se setea el spinner con el adapter
         horario.setAdapter(adapter);
     }
-
+    //este metodo permite dar la funcion al boton para poder volver a la pagina principal
     public void volver(View view) {
         Intent i = new Intent(this,MainActivity.class );
         startActivity(i);
     }
 
+    //este metodo permite dar la funcion al boton para poder ir a la actividad donde se mostrara el mapa con la ubicacion de los restaurantes.
     public void mapa(View view) {
         Intent i = new Intent(this, Mapa.class );
         startActivity(i);
